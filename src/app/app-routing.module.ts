@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AccessGuard } from './core/guards/access-guard';
+import { MainPageComponent } from './screens/home/content/main-page/main-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./screens/home/home.module').then(m => m.HomeModule),
-    canActivate: [AccessGuard]
+    component: MainPageComponent,
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./screens/login/login.module').then(m => m.LoginModule)
-  },
+
 ];
 
 @NgModule({

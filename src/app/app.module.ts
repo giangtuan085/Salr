@@ -11,13 +11,30 @@ import { UploadRoleGuard } from './core/guards/upload-role.guards';
 import { AdminRoleGuard } from './core/guards/admin-role-guards';
 import { AccessGuard } from './core/guards/access-guard';
 import { ReviewRoleGuard } from './core/guards/review-role-guards';
+import { HomeComponent } from './screens/home/home.component';
+import { PageHeaderComponent } from './screens/home/parts/page-header/page-header.component';
+import { IntroductionComponent } from './screens/home/parts/introduction/introduction.component';
+import { ExperienceComponent } from './screens/home/parts/experience/experience.component';
+import { PersonalInfoComponent } from './screens/home/parts/personal-info/personal-info.component';
+import { MainPageComponent } from './screens/home/content/main-page/main-page.component';
+import { PageFooterComponent } from './screens/home/parts/page-footer/page-footer.component';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from './shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    PageHeaderComponent,
+    IntroductionComponent,
+    ExperienceComponent,
+    PersonalInfoComponent,
+    PageFooterComponent,
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +48,9 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
       }
     }),
     HttpClientModule,
+    CommonModule,
+    SharedModule,
+    ReactiveFormsModule,
   ],
   providers: [AccessGuard, AdminRoleGuard, UploadRoleGuard, ReviewRoleGuard],
   bootstrap: [AppComponent]
