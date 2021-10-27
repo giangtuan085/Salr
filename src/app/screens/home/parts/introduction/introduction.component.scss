@@ -1,0 +1,19 @@
+#introduction-container {
+    background: url('/assets/images/bg-mock.webp') no-repeat right center;
+    width: 100%;
+    background-size: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#introduction-container:after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+}

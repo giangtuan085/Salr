@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Router, RouterStateSnapshot } from '@angular/router';
 import { FileUpload } from 'src/app/core/models/file-upload';
-import { AuthenticationService } from 'src/app/core/services/auth/authentication.service';
 import { LanguageService } from 'src/app/core/services/language/language.service';
 
 @Component({
@@ -13,6 +11,7 @@ import { LanguageService } from 'src/app/core/services/language/language.service
 })
 export class HomeComponent implements OnInit {
   selectedFile?: FileUpload;
+
 
   constructor(
     private lang: LanguageService,

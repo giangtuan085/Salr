@@ -1,13 +1,13 @@
-<div id="home-container" fxLayout="column" fxLayoutAlign="start stretch">
-    <div id="home-content" fxLayout="row" fxLayoutAlign="start stretch">
-        <app-page-header></app-page-header>
-        <app-introduction></app-introduction>
-        <div class="router" fxFlex="80">
-            <app-experience></app-experience>
-            <app-personal-info></app-personal-info>
-            <router-outlet></router-outlet>
-        </div>
-        <app-page-footer></app-page-footer>
+<div id="home-container">
+    <app-introduction></app-introduction>
+    <div class="home-content">
+        <router-outlet></router-outlet>
     </div>
+    <app-page-footer></app-page-footer>
+    <app-page-footer></app-page-footer>
+    <app-page-footer></app-page-footer>
+    <app-page-footer></app-page-footer>
+    <app-page-footer></app-page-footer>
+    <app-page-footer></app-page-footer>
 
 </div>
