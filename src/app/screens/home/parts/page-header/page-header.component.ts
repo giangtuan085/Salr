@@ -5,6 +5,8 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { MenuRoute } from 'src/app/core/models/menu-route';
+import { LanguageService } from 'src/app/core/services/language/language.service';
 
 @Component({
   selector: 'app-page-header',
@@ -14,10 +16,15 @@ import {
 export class PageHeaderComponent implements OnInit {
   @ViewChild('navbar') navbar?: ElementRef;
   private initialHeaderOffset!: number;
+  public routes!: MenuRoute[];
 
-  constructor() {}
+  constructor(private langService: LanguageService) {
+    langService.menuItems.subscribe((data: MenuRoute[]) => {
+      this.routes = data;
+    });
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   @HostListener('window:scroll', ['$event'])
   public onScrollingEvent(): void {

@@ -1,7 +1,9 @@
 {
     "MENU": {
-        "UPLOAD": "Upload",
-        "REVIEW": "Review",
-        "DOWNLOAD": "Download"
+        "TITLE": "Salr",
+        "WORK": "Work",
+        "DEV": "Dev",
+        "CONTACT": "Contact",
+        "MUSIC": "Music"
     }
 }

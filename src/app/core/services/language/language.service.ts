@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { DefaultLangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { BehaviorSubject } from 'rxjs';
 import { MenuRoute } from '../../models/menu-route';
 import { UserRole } from '../../models/user';
 
@@ -8,7 +9,8 @@ import { UserRole } from '../../models/user';
 })
 export class LanguageService {
   public translations: any;
-  public menuItems: MenuRoute[] = [];
+  private menuDataSource = new BehaviorSubject<MenuRoute[]>([]);
+  public menuItems = this.menuDataSource.asObservable();
 
   constructor(private translateService: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
@@ -21,26 +23,26 @@ export class LanguageService {
   public getTranslation(): void {
     this.translateService.onDefaultLangChange.subscribe((event: DefaultLangChangeEvent) => {
       this.translations = event.translations;
-      this.menuItems = [
+      const routes: MenuRoute[] = [
         {
-          path: 'upload',
-          title: this.translations.MENU.UPLOAD,
-          class: '',
-          role: UserRole.Upload,
+          path: '/work',
+          title: this.translations.MENU.WORK
         },
         {
-          path: 'review',
-          title: this.translations.MENU.REVIEW,
-          class: '',
-          role: UserRole.Reviewer,
+          path: '/dev',
+          title: this.translations.MENU.DEV
         },
         {
-          path: 'admin',
-          title: this.translations.MENU.DOWNLOAD,
-          class: '',
-          role: UserRole.Reviewer,
+          path: '/music',
+          title: this.translations.MENU.MUSIC
+        },
+        {
+          path: '/contact',
+          title: this.translations.MENU.CONTACT
         },
       ];
+
+      this.menuDataSource.next(routes);
     });
   }
 }

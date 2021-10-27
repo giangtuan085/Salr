@@ -1,7 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { FileUpload } from 'src/app/core/models/file-upload';
 import { LanguageService } from 'src/app/core/services/language/language.service';
 
 @Component({
@@ -10,14 +9,12 @@ import { LanguageService } from 'src/app/core/services/language/language.service
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  selectedFile?: FileUpload;
-
 
   constructor(
     private lang: LanguageService,
     private sanitizer: DomSanitizer,
     private iconRegistry: MatIconRegistry
-    ) {
+  ) {
   }
 
   ngOnInit(): void {
@@ -38,10 +35,6 @@ export class HomeComponent implements OnInit {
         'assets/svg-icon/user.svg'
       )
     );
-  }
-
-  public selectItem(item: FileUpload): void {
-    this.selectedFile = item;
   }
 
 }

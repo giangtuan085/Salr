@@ -1,3 +1,9 @@
 {
-    "HELLO": "xin chao"
+    "MENU": {
+        "TITLE": "Salr",
+        "WORK": "Work",
+        "DEV": "Dev",
+        "CONTACT": "Contact",
+        "MUSIC": "Music"
+    }
 }
