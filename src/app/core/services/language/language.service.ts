@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { DefaultLangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { BehaviorSubject } from 'rxjs';
 import { MenuRoute } from '../../models/menu-route';
-import { UserRole } from '../../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +23,10 @@ export class LanguageService {
     this.translateService.onDefaultLangChange.subscribe((event: DefaultLangChangeEvent) => {
       this.translations = event.translations;
       const routes: MenuRoute[] = [
+        {
+          path: '/',
+          title: this.translations.MENU.HOME
+        },
         {
           path: '/work',
           title: this.translations.MENU.WORK

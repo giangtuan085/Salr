@@ -1,6 +1,9 @@
-<div id="header-container" #navbar fxLayout="row" fxLayoutAlign="space-between center">
-    <a class="routerlink" routerLink="/">{{ 'MENU.TITLE' | translate }}</a>
-    <div class="nav-content">
-        <a *ngFor="let route of routes" [routerLink]="route.path" class="routerlink">{{ route.title }}</a>
+<div id="header-container" #navbar>
+    <div class="header-content" fxLayout="row" fxLayoutAlign="space-between center">
+        <a class="routerlink" routerLink="/">{{ "MENU.TITLE" | translate }}</a>
+        <div class="nav-content" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+            <a *ngFor="let route of routes" [routerLink]="route.path" class="routerlink" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">{{ route.title }}</a>
+        </div>    
     </div>
 </div>

@@ -2,8 +2,9 @@
     "MENU": {
         "TITLE": "Salr",
         "WORK": "Work",
-        "DEV": "Dev",
+        "DEV": "Dev corner",
         "CONTACT": "Contact",
-        "MUSIC": "Music"
+        "MUSIC": "Music",
+        "HOME": "Home"
     }
 }

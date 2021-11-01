@@ -2,21 +2,35 @@
   color: #fff;
   position: fixed;
   z-index: 2;
-  margin: 30px auto 0 auto;
+  margin-top: 30px;
   top: 0;
-  left: 10%;
-  width: 80%;
+  width: 100%;
   height: auto;
+  padding-bottom: 2px; // addition to border-bottom animation smoothness
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
 }
 
 .sticky {
-  color: #fff;
-  position: fixed;
-  top: 0;
-  width: 100%;
   margin-top: 0 !important;
+  background: #000;
+
+  .header-content {
+    color: #fff;
+    border-color: #000 !important;
+    margin-top: 0 !important;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.header-content {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  padding: 20px;
+  border-bottom: 1px solid;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .routerlink {
@@ -27,4 +41,16 @@
 
 .routerlink:visited {
   color: #fff;
+}
+
+.nav-content {
+  a {
+    color: #8d8d8d;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+  }
+
+  a.active, a:hover {
+    color: #fff;
+  }
 }

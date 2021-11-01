@@ -1,23 +1,51 @@
-import { MenuRoute } from '../models/menu-route';
+import { JobExperience } from '../models/job-experience';
 
 export const UserInfo = 'user';
 
-export const MenuRoutes: MenuRoute[] = [
+export const JobExperiences: JobExperience[] = [
     {
-        path: '/work',
-        title: 'Work'
+        image: 'assets/images/job-preview1.webp',
+        title: 'job 1',
+        description: '',
+        shortDesc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        `
     },
     {
-        path: '/dev',
-        title: 'Dev'
+        image: 'assets/images/job-preview1.webp',
+        title: 'job 1',
+        description: '',
+        shortDesc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        `
     },
     {
-        path: '/work',
-        title: 'Music'
+        image: 'assets/images/job-preview1.webp',
+        title: 'job 1',
+        description: '',
+        shortDesc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        `
     },
     {
-        path: '/contact',
-        title: 'Contact'
+        image: 'assets/images/job-preview1.webp',
+        title: 'job 1',
+        description: '',
+        shortDesc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        `
     },
-
+    {
+        image: 'assets/images/job-preview1.webp',
+        title: 'job 1',
+        description: '',
+        shortDesc: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        `
+    },
 ];

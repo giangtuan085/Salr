@@ -21,6 +21,11 @@ import { PageFooterComponent } from './screens/home/parts/page-footer/page-foote
 import { CommonModule } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WorkComponent } from './screens/home/content/work/work.component';
+import { DevCornerComponent } from './screens/home/content/dev-corner/dev-corner.component';
+import { MusicComponent } from './screens/home/content/music/music.component';
+import { ContactComponent } from './screens/home/content/contact/contact.component';
+import { JobPreviewComponent } from './screens/home/parts/experience/child/job-preview/job-preview.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -35,6 +40,11 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     PersonalInfoComponent,
     PageFooterComponent,
     MainPageComponent,
+    WorkComponent,
+    DevCornerComponent,
+    MusicComponent,
+    ContactComponent,
+    JobPreviewComponent,
   ],
   imports: [
     BrowserModule,

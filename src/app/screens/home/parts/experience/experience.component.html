@@ -1,1 +1,5 @@
-<p>experience works!</p>
+<div id="experience-container" fxLayout="row" fxLayoutAlign="space-around center">
+    <a class="">&#8249;</a>
+    <app-job-preview *ngFor="let job of jobExperiences" [content]="job"></app-job-preview>
+    <a class="">&#8250;</a>
+</div>
