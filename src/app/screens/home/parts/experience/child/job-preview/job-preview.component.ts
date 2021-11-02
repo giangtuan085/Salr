@@ -7,7 +7,7 @@ import { JobExperience } from 'src/app/core/models/job-experience';
   styleUrls: ['./job-preview.component.scss']
 })
 export class JobPreviewComponent implements OnInit {
-  @Input() content!: JobExperience;
+  @Input() content?: JobExperience;
 
   constructor() { }
 

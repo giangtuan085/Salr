@@ -4,3 +4,30 @@
     color: #fff;
     overflow: hidden;
 }
+
+.navigate {
+    font-size: 60px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+
+.navigate.prev::after {
+    content: '\003C';
+}
+
+.navigate.next::after {
+    content: '\003E';
+}
+
+.navigate:hover {
+    background: #fff;
+    color: #0c062e;
+}
